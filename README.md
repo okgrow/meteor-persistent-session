@@ -1,6 +1,12 @@
 Purpose
 =======
-Make Meteor's `Session` object persist its values across browser sessions.
+Make Meteor's `Session` object persist its values locally and across page
+refreshes. Meteor's default implementation loses values whenever the page is
+refreshed.
+
+Uses [amplifyjs's store](http://amplifyjs.com/api/store/) library to save
+values in the browsers `localStorage`, falling back to other solutions if it's
+not available.
 
 Installation
 ============
