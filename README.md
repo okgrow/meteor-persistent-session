@@ -60,7 +60,6 @@ TODO
 ====
 
 * Tests
-* Automatically call `clear()` when the user signs out (but make this optional)
 
 License
 =======
