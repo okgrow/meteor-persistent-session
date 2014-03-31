@@ -39,6 +39,23 @@ If you want to clear all set values, you can call `Session.clear()`, this will
 clear all key-value-pairs set using `Session.set()` or
 `Session.setTemporary()`.
 
+By default, `Session.clear()` is called when the user signs-out. To disable this
+behaviour, set `persistent_session.clear_on_signout` to false in your
+`config/settings.json` file:
+
+```json
+{
+  public: {
+    persistent_session: {
+      clear_on_signout: true
+    }
+  }
+}
+```
+
+See EventedMind's screen on [organizing environment variables and settings](https://www.eventedmind.com/feed/meteor-organizing-environment-variables-and-settings)
+for more information.
+
 TODO
 ====
 
