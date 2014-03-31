@@ -10,20 +10,11 @@ not available.
 
 Installation
 ============
-You must use Meteorite for your project.
-
-In your `smart.json` file:
-
-```json
-{
-  "packages": {
-    "meteor-persistent-session": {
-      "git": "https://github.com/okgrow/meteor-persistent-session.git",
-      "branch": "master"
-    }
-  }
-}
 ```
+mrt add persistent-session
+```
+
+That's it!
 
 Usage
 =====
