@@ -45,9 +45,9 @@ behaviour, set `persistent_session.clear_on_signout` to false in your
 
 ```json
 {
-  public: {
-    persistent_session: {
-      clear_on_signout: true
+  "public": {
+    "persistent_session": {
+      "clear_on_signout": true
     }
   }
 }
