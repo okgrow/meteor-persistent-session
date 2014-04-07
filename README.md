@@ -38,7 +38,7 @@ behaviour, set `persistent_session.clear_on_signout` to false in your
 {
   "public": {
     "persistent_session": {
-      "clear_on_signout": true
+      "clear_on_signout": false
     }
   }
 }
