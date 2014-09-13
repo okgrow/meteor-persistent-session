@@ -1,9 +1,13 @@
 Package.describe({
-  summary: "Persistently store session data on the client"
+  name: "u2622:persistent-session",
+  version: "0.2.0",
+  summary: "Persistently store Session data on the client",
+  git: "https://github.com/okgrow/meteor-persistent-session"
 });
 
-Package.on_use(function(api) {
+Package.onUse(function(api) {
+  api.versionsFrom('0.9.1'),
   api.use(['jquery', 'amplify', 'session', 'underscore']);
   api.export("PersistentSession");
-  api.add_files('lib/persistent_session.js', 'client');
+  api.addFiles('lib/persistent_session.js', 'client');
 });

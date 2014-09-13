@@ -1,8 +1,0 @@
-{
-  "name": "persistent-session",
-  "description": "Store Session variables in browser's localstorage by default",
-  "homepage": "https://github.com/okgrow/meteor-persistent-session",
-  "author": "Richard Gould <richard@okgrow.com>",
-  "version": "0.1.4",
-  "git": "https://github.com/okgrow/meteor-persistent-session.git"
-}
