@@ -20,14 +20,14 @@ Types
 =====
 
 1. Temporary Session Variable
-..* matches current Meteor implementation
-..* are not available after a  page reload
+  * matches current Meteor implementation
+  * are not available after a  page reload
 
 2. Persistent Session Variable
-..* content is stored in the localstorage until it is cleared
+  * content is stored in the localstorage until it is cleared
 
 3. Authenticated Session Variable
-..* content is stored in the localstorage AND is cleared when a user logs out
+  * content is stored in the localstorage AND is cleared when a user logs out
 
 Usage
 =====
@@ -36,13 +36,13 @@ Setting Session Values
 ----------------------
 
 * Session.set(key, value)
-..* stores a session var according to the default_method (see Options)
+  * stores a session var according to the default_method (see Options)
 * Session.setTemp(key, value)
-..* stores a temporary session variable (non-persistent)
+  * stores a temporary session variable (non-persistent)
 * Session.setPersistent(key, value)
-..* store a persistent session variable (persistent)
+  * store a persistent session variable (persistent)
 * Session.setAuth(key, value)
-..* stores a authenticated session variable (persistent + automatic deletion)
+  * stores a authenticated session variable (persistent + automatic deletion)
 
 Updating Session Values
 -----------------------
@@ -76,15 +76,15 @@ Clear Values
 ------------
 
 * Session.clear()
-..* destroys all session variables of all types
+  * destroys all session variables of all types
 * Session.clear(key)
-..* destroys a single session variable
+  * destroys a single session variable
 * Session.clearTemp()
-..* destroys all temporary session variables
+  * destroys all temporary session variables
 * Session.clearPersistent()
-..* destroys all persistent session variables
+  * destroys all persistent session variables
 * Session.clearAuth()
-..* destroys all authenticated session variables
+  * destroys all authenticated session variables
 
 Other
 -----
