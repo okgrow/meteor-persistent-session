@@ -11,38 +11,111 @@ not available.
 Installation
 ============
 ```
-mrt add persistent-session
+meteor add u2622:persistent-session
 ```
 
 That's it!
 
+Types
+=====
+
+1. Temporary Session Variable
+..* matches current Meteor implementation
+..* are not available after a  page reload
+
+2. Persistent Session Variable
+..* content is stored in the localstorage until it is cleared
+
+3. Authenticated Session Variable
+..* content is stored in the localstorage AND is cleared when a user logs out
+
 Usage
 =====
 
-Use `Session.set()` and `Session.get()` normally. The values will be persisted
-across browser sessions.
+Setting Session Values
+----------------------
 
-If you want `set()` to behave as it does normally in Meteor, use
-`Session.setTemporary()`, which will cause the key-value-pair not to persist,
-and it will be lost upon browser refresh.
+* Session.set(key, value)
+..* stores a session var according to the default_method (see Options)
+* Session.setTemp(key, value)
+..* stores a temporary session variable (non-persistent)
+* Session.setPersistent(key, value)
+..* store a persistent session variable (persistent)
+* Session.setAuth(key, value)
+..* stores a authenticated session variable (persistent + automatic deletion)
 
-If you want to clear all set values, you can call `Session.clear()`, this will
-clear all key-value-pairs set using `Session.set()` or
-`Session.setTemporary()`.
+Updating Session Values
+-----------------------
 
-By default, `Session.clear()` is called when the user signs-out. To disable this
-behaviour, set `persistent_session.clear_on_signout` to false in your
+You can update the value of an existing session variable without changing or knowing its type.
+Note: If you call update on an non-existent variable, it will be created as a temporary variable.
+
+* Session.update(key, value)
+
+Set Default
+-----------
+
+All of the `set()` functions have a `setDefault()` counterpart where the session variable will only be created if one doesn't already exist.
+Note: None of the `setDefault()` commands will change the type of an existing session variable.
+
+* Session.setDefault(key, value)
+* Session.setDefaultTemp(key, value)
+* Session.setDefaultPersistent(key, value)
+* Session.setDefaultAuth(key, value)
+
+Change Types
+------------
+
+Use these commands to change a session variable into a particular type.
+
+* Session.makeTemp(key)
+* Session.makePersistent(key)
+* Session.makeAuth(key)
+
+Clear Values
+------------
+
+* Session.clear()
+..* destroys all session variables of all types
+* Session.clear(key)
+..* destroys a single session variable
+* Session.clearTemp()
+..* destroys all temporary session variables
+* Session.clearPersistent()
+..* destroys all persistent session variables
+* Session.clearAuth()
+..* destroys all authenticated session variables
+
+Other
+-----
+
+These work the same as the current Meteor implementation:
+
+* Session.get(key)
+* Session.equals(key, value)
+
+Options
+=======
+
+To define the default type for session variables, set `persistent_session.default_method` to your preferred type in your
 `config/settings.json` file:
 
 ```json
 {
   "public": {
     "persistent_session": {
-      "clear_on_signout": false
+      "default_method": 'your-preferred-type'
     }
   }
 }
 ```
+
+`persistent_session.default_method` can take one of the following values:
+* `persistent`
+* `authenticated`
+
+In any other case the `default_method` will fall back to `temporary`
+
 
 See EventedMind's screen on [organizing environment variables and settings](https://www.eventedmind.com/feed/meteor-organizing-environment-variables-and-settings)
 for more information.
