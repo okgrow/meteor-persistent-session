@@ -35,13 +35,13 @@ Usage
 Setting Session Values
 ----------------------
 
-* Session.set(key, value)
+* `Session.set(key, value)`
   * stores a session var according to the default_method (see Options)
-* Session.setTemp(key, value)
+* `Session.setTemp(key, value)`
   * stores a temporary session variable (non-persistent)
-* Session.setPersistent(key, value)
+* `Session.setPersistent(key, value)`
   * store a persistent session variable (persistent)
-* Session.setAuth(key, value)
+* `Session.setAuth(key, value)`
   * stores a authenticated session variable (persistent + automatic deletion)
 
 Updating Session Values
@@ -50,7 +50,7 @@ Updating Session Values
 You can update the value of an existing session variable without changing or knowing its type.
 Note: If you call update on an non-existent variable, it will be created as a temporary variable.
 
-* Session.update(key, value)
+* `Session.update(key, value)`
 
 Set Default
 -----------
@@ -58,32 +58,32 @@ Set Default
 All of the `set()` functions have a `setDefault()` counterpart where the session variable will only be created if one doesn't already exist.
 Note: None of the `setDefault()` commands will change the type of an existing session variable.
 
-* Session.setDefault(key, value)
-* Session.setDefaultTemp(key, value)
-* Session.setDefaultPersistent(key, value)
-* Session.setDefaultAuth(key, value)
+* `Session.setDefault(key, value)`
+* `Session.setDefaultTemp(key, value)`
+* `Session.setDefaultPersistent(key, value)`
+* `Session.setDefaultAuth(key, value)`
 
 Change Types
 ------------
 
 Use these commands to change a session variable into a particular type.
 
-* Session.makeTemp(key)
-* Session.makePersistent(key)
-* Session.makeAuth(key)
+* `Session.makeTemp(key)`
+* `Session.makePersistent(key)`
+* `Session.makeAuth(key)`
 
 Clear Values
 ------------
 
-* Session.clear()
+* `Session.clear()`
   * destroys all session variables of all types
-* Session.clear(key)
+* `Session.clear(key)`
   * destroys a single session variable
-* Session.clearTemp()
+* `Session.clearTemp()`
   * destroys all temporary session variables
-* Session.clearPersistent()
+* `Session.clearPersistent()`
   * destroys all persistent session variables
-* Session.clearAuth()
+* `Session.clearAuth()`
   * destroys all authenticated session variables
 
 Other
@@ -91,8 +91,8 @@ Other
 
 These work the same as the current Meteor implementation:
 
-* Session.get(key)
-* Session.equals(key, value)
+* `Session.get(key)`
+* `Session.equals(key, value)`
 
 Options
 =======
