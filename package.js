@@ -1,6 +1,6 @@
 Package.describe({
   name: "u2622:persistent-session",
-  version: "0.2.1",
+  version: "0.2.2",
   summary: "Persistently store Session data on the client",
   git: "https://github.com/okgrow/meteor-persistent-session"
 });
