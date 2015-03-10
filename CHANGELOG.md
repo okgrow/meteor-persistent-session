@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.2.2...master)
 
+ * Store values as EJSON, fixes #17 (Reported by [jamesgibson14](https://github.com/jamesgibson14))
+
 ### [0.2.2](https://github.com/okgrow/meteor-persistent-session/compare/v0.2.1...v0.2.2)
 
  * Handle case where a persistent value is set to 0 (Reported by [IndigoStarfish](https://github.com/IndigoStarfish))
