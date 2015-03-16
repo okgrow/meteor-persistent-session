@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.0...master)
 
+ * Fix issue with trying to evaluate unparsed EJSON value
+
 ### [0.3.0](https://github.com/okgrow/meteor-persistent-session/compare/v0.2.2...v0.3.0)
 
  * Changed `default_method` to "temporary", fixes #15 ([pull request #16](https://github.com/okgrow/meteor-persistent-session/pull/16) by [aramk](https://github.com/aramk))
