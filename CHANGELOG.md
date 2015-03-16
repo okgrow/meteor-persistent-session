@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.2.2...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.0...master)
+
+### [0.3.0](https://github.com/okgrow/meteor-persistent-session/compare/v0.2.2...v0.3.0)
 
  * Changed `default_method` to "temporary", fixes #15 ([pull request #16](https://github.com/okgrow/meteor-persistent-session/pull/16) by [aramk](https://github.com/aramk))
  * Store values as EJSON, fixes #17 (Reported by [jamesgibson14](https://github.com/jamesgibson14))
