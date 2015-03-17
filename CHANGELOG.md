@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.0...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.1...master)
+
+### [0.3.1](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.0...v0.3.1)
 
  * Fix issue with trying to evaluate unparsed EJSON value
 
