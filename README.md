@@ -69,6 +69,15 @@ Setting Session Values
 * `Session.setAuth(key, value)`
   * stores a authenticated session variable (persistent + automatic deletion)
 
+As of 3.3, you can use an object to set multiple values at once:
+
+```javasript
+Session.setPersistent({foo: "foo", bar: "bar"});
+```
+
+This works with all of the `set*` methods. All key/values set as an object
+will have the same type of scoping (persistent/auth/temporary).
+
 Updating Session Values
 -----------------------
 
