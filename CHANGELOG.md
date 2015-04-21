@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.2...master)
 
+ * Support `Session.set` taking an object parameter [PR #25](https://github.com/okgrow/meteor-persistent-session/pull/25)
+
 ### [0.3.2](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.1...v0.3.2)
 
  * Add dependance on ejson package, fixes #22 [PR #23](https://github.com/okgrow/meteor-persistent-session/pull/23) by [djhi](https://github.com/djhi)
