@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.3...master)
 
+ * Don't try to parse values that weren't explicitly set through Session, fixes #24 (Reported by [tcastelli](https://github.com/tcastelli))
+
 ### [0.3.3](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.2...v0.3.3)
 
  * Support `Session.set` taking an object parameter [PR #25](https://github.com/okgrow/meteor-persistent-session/pull/25)
