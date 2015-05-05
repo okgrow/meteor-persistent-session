@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.3...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.4...master)
+
+### [0.3.4](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.3...v0.3.4)
 
  * Don't try to parse values that weren't explicitly set through Session, fixes #24 (Reported by [tcastelli](https://github.com/tcastelli))
 
