@@ -227,3 +227,49 @@ Tinytest.add("setDefaultPersistent should not override an existing persisted val
   test.equal('awesome', result);
 });
 
+
+Tinytest.add("equals works", function(test) {
+  var dictName = Random.id();
+  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+
+  var TestSession = new PersistentSession(dictName);
+
+  var result = TestSession.get('foo');
+  test.equal('awesome', result);
+
+  var result = TestSession.equals('foo', 'awesome');
+  test.equal(true, result);
+});
+
+Tinytest.add("all works", function(test) {
+  var dictName = Random.id();
+  // default the session with some data before creating it
+  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+  // since we set foo, we'll also need it's key to be set to `set` is called 
+  // and it ends up in the `dict.keys`
+  amplify.store('__PSKEYS__' + dictName, ['foo']);
+
+  var TestSession = new PersistentSession(dictName);
+
+  var result = TestSession.get('foo');
+  test.equal('awesome', result);
+
+  TestSession.set('bar', 'thing');
+  var result = TestSession.get('bar');
+  test.equal('thing', result);
+
+  TestSession.setDefaultPersistent('foobar', 'stuff');
+  TestSession.setAuth('foobarfoo', 'fact');
+  TestSession.setPersistent('barfoobar', 'entity');
+
+  var result = TestSession.all();
+
+  test.equal({
+    "foo"       : "awesome",
+    "bar"       : "thing",
+    "foobar"    : "stuff",
+    "foobarfoo" : "fact",
+    "barfoobar" : "entity"
+  }, result);
+});
+
