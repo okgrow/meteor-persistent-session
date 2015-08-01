@@ -2,10 +2,10 @@
 
  * Revert 6e4b58d
  * Add a weak dependency on `accounts-base`, fixes #9 (Reported by [aadamsx](https://github.com/aadamsx) and [afoda](https://github.com/afoda))
- * Added tests
- * Use `Tracker.autorun` to detect logout, rather than monkey-patching `Meteor.logout`
- * Permit namespacing and instantiation of custom PersistentSessions
- * Add support for `ReactiveDict`'s `all` and `equals`
+ * Added tests [PR #33](https://github.com/okgrow/meteor-persistent-session/pull/33) by [RobertLowe](https://github.com/RobertLowe)
+ * Use `Tracker.autorun` to detect logout, rather than monkey-patching `Meteor.logout` [PR #33](https://github.com/okgrow/meteor-persistent-session/pull/33) by [RobertLowe](https://github.com/RobertLowe)
+ * Permit namespacing and instantiation of custom PersistentSessions [PR #33](https://github.com/okgrow/meteor-persistent-session/pull/33) by [RobertLowe](https://github.com/RobertLowe)
+ * Add support for `ReactiveDict`'s `all` and `equals` [PR #33](https://github.com/okgrow/meteor-persistent-session/pull/33) by [RobertLowe](https://github.com/RobertLowe)
  * Do not stringify values (amplify already does), fixes #31 [PR #35](https://github.com/okgrow/meteor-persistent-session/pull/35) by [mike182uk](https://github.com/mike182uk)
 
 ### [0.3.4](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.3...v0.3.4)
