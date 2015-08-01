@@ -167,7 +167,7 @@ Tinytest.add("multiple sessions don't effect each other (never cross the streams
 
 Tinytest.add("store gets persisted value", function(test) {
   var dictName = Random.id();
-  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+  amplify.store(dictName + 'foo', "awesome");
 
   var TestSession = new PersistentSession(dictName);
   var result = TestSession.get('foo');
@@ -214,7 +214,7 @@ Tinytest.add("setDefaultPersistent only sets unset keys (gh #32)", function(test
 
 Tinytest.add("setDefaultPersistent should not override an existing persisted value", function(test) {
   var dictName = Random.id();
-  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+  amplify.store(dictName + 'foo', "awesome");
 
   var TestSession = new PersistentSession(dictName);
 
@@ -230,7 +230,7 @@ Tinytest.add("setDefaultPersistent should not override an existing persisted val
 
 Tinytest.add("equals works", function(test) {
   var dictName = Random.id();
-  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+  amplify.store(dictName + 'foo', "awesome");
 
   var TestSession = new PersistentSession(dictName);
 
@@ -244,7 +244,7 @@ Tinytest.add("equals works", function(test) {
 Tinytest.add("all works", function(test) {
   var dictName = Random.id();
   // default the session with some data before creating it
-  amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
+  amplify.store(dictName + 'foo', "awesome");
   // since we set foo, we'll also need it's key to be set to `set` is called
   // and it ends up in the `dict.keys`
   amplify.store('__PSKEYS__' + dictName, ['foo']);
