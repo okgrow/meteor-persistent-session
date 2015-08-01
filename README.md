@@ -128,6 +128,8 @@ These work the same as the current Meteor implementation:
 * `Session.get(key)`
 * `Session.equals(key, value)`
 
+`ReactiveDict`'s `all` method is also supported.
+
 Options
 =======
 
