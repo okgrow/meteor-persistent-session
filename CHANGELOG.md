@@ -6,6 +6,7 @@
  * Use `Tracker.autorun` to detect logout, rather than monkey-patching `Meteor.logout`
  * Permit namespacing and instantiation of custom PersistentSessions
  * Add support for `ReactiveDict`'s `all` and `equals`
+ * Do not stringify values (amplify already does), fixes #31 [PR #35](https://github.com/okgrow/meteor-persistent-session/pull/35) by [mike182uk](https://github.com/mike182uk)
 
 ### [0.3.4](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.3...v0.3.4)
 
