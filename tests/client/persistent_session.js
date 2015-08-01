@@ -178,8 +178,8 @@ Tinytest.add("store gets persisted value", function(test) {
 Tinytest.add("setDefaultPersistent sets with an object", function(test) {
   var TestSession = new PersistentSession(Random.id());
 
-  TestSession.setDefaultPersistent({ 
-    'id': 'foobarid', 
+  TestSession.setDefaultPersistent({
+    'id': 'foobarid',
     'room_id': 'foobarroomid'
   });
 
@@ -198,8 +198,8 @@ Tinytest.add("setDefaultPersistent only sets unset keys (gh #32)", function(test
   var result = TestSession.get('room_id');
   test.equal('awesome', result);
 
-  TestSession.setDefaultPersistent({ 
-    'id': 'foobarid', 
+  TestSession.setDefaultPersistent({
+    'id': 'foobarid',
     'room_id': 'foobarroomid'
   });
 
@@ -245,7 +245,7 @@ Tinytest.add("all works", function(test) {
   var dictName = Random.id();
   // default the session with some data before creating it
   amplify.store(dictName + 'foo', EJSON.stringify("awesome"));
-  // since we set foo, we'll also need it's key to be set to `set` is called 
+  // since we set foo, we'll also need it's key to be set to `set` is called
   // and it ends up in the `dict.keys`
   amplify.store('__PSKEYS__' + dictName, ['foo']);
 
