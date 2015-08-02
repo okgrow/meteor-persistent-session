@@ -23,7 +23,7 @@ to `persistent`:
 {
   "public": {
     "persistent_session": {
-      "default_method": 'persistent'
+      "default_method": "persistent"
     }
   }
 }
