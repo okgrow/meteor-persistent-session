@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.4...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...master)
+
+### [0.4.0](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.4...v0.4.0)
 
  * Revert 6e4b58d
  * Add a weak dependency on `accounts-base`, fixes #9 (Reported by [aadamsx](https://github.com/aadamsx) and [afoda](https://github.com/afoda))
