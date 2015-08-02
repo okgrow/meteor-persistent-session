@@ -3,6 +3,7 @@
 ### [0.4.1](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...v0.4.1)
 
  * Fix reference error in `PersistentSession.equals` [PR #39](https://github.com/okgrow/meteor-persistent-session/pull/39) by [ryepdx](https://github.com/ryepdx)
+ * Changed quotes to valid JSON [PR #40](https://github.com/okgrow/meteor-persistent-session/pull/40) by [aramk](https://github.com/aramk)
 
 ### [0.4.0](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.4...v0.4.0)
 
