@@ -1,4 +1,8 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.1...master)
+
+### [0.4.1](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...v0.4.1)
+
+ * Fix reference error in `PersistentSession.equals` [PR #39](https://github.com/okgrow/meteor-persistent-session/pull/39) by [ryepdx](https://github.com/ryepdx)
 
 ### [0.4.0](https://github.com/okgrow/meteor-persistent-session/compare/v0.3.4...v0.4.0)
 
