@@ -36,6 +36,19 @@ Tinytest.add("clear all keys", function(test) {
   test.equal(undefined, result);
 });
 
+Tinytest.add("skip undefined keys", function(test) {
+  var TestSession = new PersistentSession(Random.id());
+  test.equal(_.keys(TestSession._dict.keys).length, 0);
+
+  TestSession.set(undefined, 'woo');
+  test.equal(_.keys(TestSession._dict.keys).length, 1);
+
+  TestSession.clear();
+
+  test.equal(_.keys(TestSession._dict.keys).length, 0);
+
+});
+
 Tinytest.add("clear single key", function(test) {
   var TestSession = new PersistentSession(Random.id());
 
