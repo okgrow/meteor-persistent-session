@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.1...master)
 
+ * Fix `Session.clear` issues, #42/#44 [PR #46](https://github.com/okgrow/meteor-persistent-session/pull/46) by [mhinton](https://github.com/mhinton)
+
 ### [0.4.1](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...v0.4.1)
 
  * Fix reference error in `PersistentSession.equals` [PR #39](https://github.com/okgrow/meteor-persistent-session/pull/39) by [ryepdx](https://github.com/ryepdx)
