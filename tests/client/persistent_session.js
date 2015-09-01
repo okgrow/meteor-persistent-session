@@ -273,6 +273,7 @@ Tinytest.add("all works", function(test) {
   // since we set foo, we'll also need it's key to be set to `set` is called
   // and it ends up in the `dict.keys`
   amplify.store('__PSKEYS__' + dictName, ['foo']);
+  amplify.store('__PSDATAVERSION__' + dictName, 4);
 
   var TestSession = new PersistentSession(dictName);
 
@@ -298,3 +299,20 @@ Tinytest.add("all works", function(test) {
   }, result);
 });
 
+Tinytest.add("updates from 3.x to 4.x", function(test) {
+  // Set up 3.x-format keys/values
+  var dictName = Random.id();
+  amplify.store(dictName + 'foo', '[]'); // 3.x saved it as a string
+  amplify.store(dictName + 'bar', []); // new 4.x data format, migration shouldn't clobber it
+  amplify.store(dictName + 'obj1', EJSON.stringify({ foo: "bar" }));
+  amplify.store(dictName + 'obj2', { foo2: "bar2" });
+  amplify.store('__PSKEYS__' + dictName, ['foo', 'bar', 'obj1', 'obj2']);
+  amplify.store('__PSDATAVERSION__' + dictName, 1);
+
+  var TestSession = new PersistentSession(dictName);
+  test.equal(TestSession.get('foo'), []);
+  test.equal(TestSession.get('bar'), []);
+  test.equal(TestSession.get('obj1'), { foo: "bar" });
+  test.equal(TestSession.get('obj2'), { foo2: "bar2" });
+  test.equal(amplify.store('__PSDATAVERSION__' + dictName), 4);
+});
