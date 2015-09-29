@@ -300,19 +300,25 @@ Tinytest.add("all works", function(test) {
 });
 
 Tinytest.add("updates from 3.x to 4.x", function(test) {
-  // Set up 3.x-format keys/values
   var dictName = Random.id();
-  amplify.store(dictName + 'foo', '[]'); // 3.x saved it as a string
-  amplify.store(dictName + 'bar', []); // new 4.x data format, migration shouldn't clobber it
-  amplify.store(dictName + 'obj1', EJSON.stringify({ foo: "bar" }));
-  amplify.store(dictName + 'obj2', { foo2: "bar2" });
-  amplify.store('__PSKEYS__' + dictName, ['foo', 'bar', 'obj1', 'obj2']);
+  localStorage.clear();
+  // Set up 3.x-format keys/values
+  localStorage['__amplify__' + dictName + 'foo'] = '{"data":"[]","expires":null}';
+  localStorage['__amplify__' + dictName + 'bar'] = '{"data":"\\"noodol\\"","expires":null}';
+  localStorage['__amplify__' + dictName + 'obj'] = '{"data":"{\\"obj\\":\\"val\\"}","expires":null}';
+  // 4.x-format keys/values
+  localStorage['__amplify__' + dictName + 'foo4'] = '{"data":[],"expires":null}';
+  localStorage['__amplify__' + dictName + 'bar4'] = '{"data":"noodol","expires":null}';
+  localStorage['__amplify__' + dictName + 'obj4'] = '{"data":{"obj":"val"},"expires":null}';
+  amplify.store('__PSKEYS__' + dictName, ['foo', 'bar', 'obj', 'foo4', 'bar4', 'obj4']);
   amplify.store('__PSDATAVERSION__' + dictName, 1);
 
   var TestSession = new PersistentSession(dictName);
-  test.equal(TestSession.get('foo'), []);
-  test.equal(TestSession.get('bar'), []);
-  test.equal(TestSession.get('obj1'), { foo: "bar" });
-  test.equal(TestSession.get('obj2'), { foo2: "bar2" });
   test.equal(amplify.store('__PSDATAVERSION__' + dictName), 4);
+  test.equal(TestSession.get('foo'), []);
+  test.equal(TestSession.get('bar'), "noodol");
+  test.equal(TestSession.get('obj'), { obj: "val" });
+  test.equal(TestSession.get('foo4'), []);
+  test.equal(TestSession.get('bar4'), "noodol");
+  test.equal(TestSession.get('obj4'), { obj: "val" });
 });
