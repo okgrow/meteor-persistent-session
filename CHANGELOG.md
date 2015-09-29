@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.2...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.3...master)
+
+### [0.4.3](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.2...v0.4.3)
 
  * Fix #48 - console.log messages (Reported by [themeteorchef](https://github.com/themeteorchef)
 
