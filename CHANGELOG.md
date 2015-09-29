@@ -1,6 +1,8 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.1...master)
 
  * Fix `Session.clear` issues, #42/#44 [PR #46](https://github.com/okgrow/meteor-persistent-session/pull/46) by [mhinton](https://github.com/mhinton)
+ * Fix #37 - Values turned into strings (Reported by [lorensr](https://github.com/lorensr))
+ * Fix #45 - 0.3.5 and 0.4.\* are incompatible (Reported by [freiit](https://github.com/freiit))
 
 ### [0.4.1](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.0...v0.4.1)
 
