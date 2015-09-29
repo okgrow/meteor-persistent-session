@@ -1,5 +1,7 @@
 ### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.2...master)
 
+ * Fix #48 - console.log messages (Reported by [themeteorchef](https://github.com/themeteorchef)
+
 ### [0.4.2](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.1...v0.4.2)
 
  * Fix `Session.clear` issues, #42/#44 [PR #46](https://github.com/okgrow/meteor-persistent-session/pull/46) by [mhinton](https://github.com/mhinton)
