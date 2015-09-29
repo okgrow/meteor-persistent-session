@@ -273,6 +273,7 @@ Tinytest.add("all works", function(test) {
   // since we set foo, we'll also need it's key to be set to `set` is called
   // and it ends up in the `dict.keys`
   amplify.store('__PSKEYS__' + dictName, ['foo']);
+  amplify.store('__PSDATAVERSION__' + dictName, 4);
 
   var TestSession = new PersistentSession(dictName);
 
@@ -298,3 +299,26 @@ Tinytest.add("all works", function(test) {
   }, result);
 });
 
+Tinytest.add("updates from 3.x to 4.x", function(test) {
+  var dictName = Random.id();
+  localStorage.clear();
+  // Set up 3.x-format keys/values
+  localStorage['__amplify__' + dictName + 'foo'] = '{"data":"[]","expires":null}';
+  localStorage['__amplify__' + dictName + 'bar'] = '{"data":"\\"noodol\\"","expires":null}';
+  localStorage['__amplify__' + dictName + 'obj'] = '{"data":"{\\"obj\\":\\"val\\"}","expires":null}';
+  // 4.x-format keys/values
+  localStorage['__amplify__' + dictName + 'foo4'] = '{"data":[],"expires":null}';
+  localStorage['__amplify__' + dictName + 'bar4'] = '{"data":"noodol","expires":null}';
+  localStorage['__amplify__' + dictName + 'obj4'] = '{"data":{"obj":"val"},"expires":null}';
+  amplify.store('__PSKEYS__' + dictName, ['foo', 'bar', 'obj', 'foo4', 'bar4', 'obj4']);
+  amplify.store('__PSDATAVERSION__' + dictName, 1);
+
+  var TestSession = new PersistentSession(dictName);
+  test.equal(amplify.store('__PSDATAVERSION__' + dictName), 4);
+  test.equal(TestSession.get('foo'), []);
+  test.equal(TestSession.get('bar'), "noodol");
+  test.equal(TestSession.get('obj'), { obj: "val" });
+  test.equal(TestSession.get('foo4'), []);
+  test.equal(TestSession.get('bar4'), "noodol");
+  test.equal(TestSession.get('obj4'), { obj: "val" });
+});
