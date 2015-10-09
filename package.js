@@ -18,6 +18,8 @@ Package.onUse(function(api) {
 Package.onTest(function (api) {
   api.use("tinytest");
   api.use("amplify");
+  api.use("random");
+  api.use("underscore");
   api.use("reactive-dict"); // we only need this exposed for testing
   api.use("u2622:persistent-session");
 
