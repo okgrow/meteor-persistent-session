@@ -208,12 +208,13 @@ Tinytest.add("setDefaultPersistent sets with an object", function(test) {
     'room_id': 'foobarroomid'
   });
 
+  TestSession._dict.clear();
+
   var result = TestSession.get('id');
   test.equal('foobarid', result);
 
   var result = TestSession.get('room_id');
   test.equal('foobarroomid', result);
-
 });
 
 Tinytest.add("setDefaultPersistent only sets unset keys (gh #32)", function(test) {
