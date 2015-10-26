@@ -1,4 +1,6 @@
-### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.3...master)
+### Master [changes](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.4...master)
+
+### [0.4.4](https://github.com/okgrow/meteor-persistent-session/compare/v0.4.3...v0.4.4)
 
  * Fix #32 - setDefaultPersistent with an object doesn't persist data (Reported by [rslonik](https://github.com/rslonik)
 
