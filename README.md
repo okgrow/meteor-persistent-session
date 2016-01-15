@@ -161,6 +161,11 @@ TODO
 
 * Perhaps support saving session data in the URL ('setRoute' or something similar)
 
+Contributing
+============
+
+Issues and Pull Requests are always welcome. Please read our [contribution guidelines](https://github.com/okgrow/guides/blob/master/contributing.md)
+
 License
 =======
 
