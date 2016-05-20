@@ -140,7 +140,7 @@ To define the default type for session variables, set `persistent_session.defaul
 {
   "public": {
     "persistent_session": {
-      "default_method": 'your-preferred-type'
+      "default_method": "your-preferred-type"
     }
   }
 }
