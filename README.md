@@ -34,12 +34,18 @@ Installation
 ```
 meteor add u2622:persistent-session
 ```
+**Note:** To use persistent-session, your project must have Session already installed. You can add Meteor's Session package by `meteor add session`.
 
 That's it! Now you can use `Session.setPersistent` to set a session variable
 that will save after a refresh.
 
 If you'd like, you can have `Session.set` do this as well. See the Options
 section below.
+
+For Meteor 1.3+
+---------------
+
+If your app is using the imports syntax, the persistent-session package will work by simply importing Session where it is used. e.g - `import { Session } from 'meteor/session'`
 
 Types
 =====
