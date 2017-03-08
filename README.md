@@ -1,8 +1,6 @@
 This project is UNSUPPORTED!
 ===========================
-We are no longer supporting the development of this package.
-
-#### __Use at your own risk__
+We are no longer supporting the development of this package. __Use at your own risk!__
 
 
 Purpose
