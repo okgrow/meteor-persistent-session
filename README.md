@@ -1,3 +1,8 @@
+This project is UNSUPPORTED!
+===========================
+We are no longer supporting the development of this package. __Use at your own risk!__
+
+
 Purpose
 =======
 Make Meteor's `Session` object persist its values locally and across page
