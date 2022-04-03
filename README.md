@@ -1,8 +1,3 @@
-This project is UNSUPPORTED!
-===========================
-We are no longer supporting the development of this package. __Use at your own risk!__
-
-
 Purpose
 =======
 Make Meteor's `Session` object persist its values locally and across page
@@ -13,8 +8,8 @@ Uses [amplifyjs's store](http://amplifyjs.com/api/store/) library to save
 values in the browsers `localStorage`, falling back to other solutions if it's
 not available.
 
-Upgrading from 0.2.x to 0.3.x
-=============================
+Upgrading from 0.2.x to 0.3.x and 2.6.1
+======================================
 
 The default behaviour of `Session.set` has been changed. `default_method` now
 defaults to `temporary` (as was mentioned in the docs), rather than
@@ -37,7 +32,7 @@ to `persistent`:
 Installation
 ============
 ```
-meteor add u2622:persistent-session
+meteor add designveloper:persistent-session
 ```
 **Note:** To use persistent-session, your project must have Session already installed. You can add Meteor's Session package by `meteor add session`.
 
