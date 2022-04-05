@@ -14,7 +14,7 @@
     ],
     [
       "jquery",
-      "3.0.0"
+      "1.11.11"
     ],
     [
       "json",
@@ -35,7 +35,7 @@
     [
       "tracker",
       "1.2.0"
-    ],
+    ]
   ],
   "pluginDependencies": [],
   "toolVersion": "meteor-tool@2.6.1",

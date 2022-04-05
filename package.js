@@ -1,13 +1,13 @@
 Package.describe({
   name: "designveloper:persistent-session",
-  version: "2.6.1",
+  version: "2.6.3",
   summary: "Persistently store Session data on the client",
-  git: "https://github.com/Designveloper/meteor-persistent-session/"
+  git: "https://github.com/Designveloper/meteor-persistent-session.git",
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('2.6.1'),
-  api.use(['jquery', 'amplify', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
+  api.versionsFrom('2.6.1');
+  api.use(['jquery@1.11.11', 'amplify@1.0.0', 'tracker', 'reactive-dict', 'session', 'underscore', 'ejson']);
   // If `accounts-base` is loaded, we have to make sure that this package is
   // loaded after `accounts-base` is, so we specify `weak: true` here
   api.use('accounts-base', { weak: true });
